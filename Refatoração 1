@@ -1,0 +1,5 @@
+public void concederReajuste(Funcionario funcionario, Desempenho desempenho){
+  BigDecimal reajuste = desempenho.percentualReajuste();
+  BigDecimal reajuste = funcionaraio.getSalario().,multiply(percentual);
+  funcionario.reajustarSalario(reajuste);
+}
