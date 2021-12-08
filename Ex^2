@@ -1,0 +1,23 @@
+@Test
+void bonusDeveriaSerZeroParFuncionarComSalarioMuitoAlto(){
+  BonusService service = new BonusService();
+  service.calcularBonus(new Funcionairio("Rodrigo", LocalDAte.now(), new BigDecimal("25000")));
+  
+  assertEquals(new BigDecimal("0.00"),bonus);
+}
+
+@Test
+void bonusDeveriaSerZeroParFuncionarComSalarioBaixo(){
+  BonusService service = new BonusService();
+  service.calcularBonus(new Funcionairio("Rodrigo", LocalDAte.now(), new BigDecimal("2500")));
+  
+  assertEquals(new BigDecimal("250.00"),bonus);
+}
+
+@Test
+void bonusDeveriaSerZeroParFuncionarComSalarioBaixo(){
+  BonusService service = new BonusService();
+  service.calcularBonus(new Funcionairio("Rodrigo", LocalDAte.now(), new BigDecimal("2500")));
+  
+  assertEquals(new BigDecimal("250.00"),bonus);
+}
