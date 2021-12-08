@@ -1,0 +1,10 @@
+
+@Test
+public void reajusteDeveriaSerDeTresPorcentoQunadoForAD(){
+   ReajusteService service = new ReajusteService();
+   Funcionario funcionario = new Funcionario("ana",localDate.now(), new BigDecimal("100")));
+   
+   service.concederReajuste(funcionario, Desempenho.A_DESEJAR);
+   
+   assertEquals(new BigDecimal("1030.00"), funcionario.getSalario());
+}
