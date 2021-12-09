@@ -1,0 +1,37 @@
+private ReajusteService service;
+private Funcionario funcionario;
+
+@BeforEach
+public void inicializar(){
+  this.service = new ReajusteService();
+  this.funcionario = new Funcionario("ana",LocalDate.now(), new BigDecimal("")):
+}
+
+@Test
+public void reajusteDeveriaSerDeTresPorcento(){
+  service.concederReajuste(funcionario, desempenho.bom);
+  assertEquals(new BigDecimal("1030.00"), bonus));
+}
+
+@Test
+public void reajusteDeveriaSerDeTresPorcento(){
+  service.concederReajuste(funcionario, desempenho.otimo);
+  assertEquals(new BigDecimal("25500.00"), bonus));
+}
+
+@Test
+public void reajusteDeveriaSerDeTresPorcento(){
+  service.concederReajuste(funcionario, desempenho.ruim);
+  assertEquals(new BigDecimal("1022.00"), bonus));
+}
+
+@Test
+public void reajusteDeveriaSerDeTresPorcento(){
+  service.concederReajuste(funcionario, desempenho.regular);
+  assertEquals(new BigDecimal("1210.00"), bonus));
+}
+
+@AfterEach
+public void finalizar(){
+  system.out.println("fim");
+}
