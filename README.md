@@ -1,2 +1,2 @@
 # JunitTest
-Exercícios De Junit
+Exercicos do curso de Junit e do Mockito
