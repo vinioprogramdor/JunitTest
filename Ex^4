@@ -1,0 +1,28 @@
+@Test
+void BonusDeveriaSerZeroComSalarioAlto(){
+  bonusService service = new BonusService
+  
+  assertThrows(IllegalAgumentExpection.class () -> service.calcularBonus(new funcionario("Rodrigo", LocalDate.now(), new BigDecimal("25000.00")));
+}
+
+// ou 
+
+@Test
+void BonusDeveriaSerZeroComSalarioAlto(){
+  bonusService service = new BonusService
+  
+  Try{
+    service.calcularBonus(new funcionario("Rodrigo", LocalDate.now(), new BigDecimal("25000.00")));
+    fail("Teste Falhou")
+  }catch(Exception e){
+    assertEquals("funcionario com salario maior do que o esperado")
+  }
+}
+
+
+@Test
+void BonusDeveriaSerZeroComSalarioAlto(){
+  bonusService service = new BonusService
+  
+  assertThrows(IllegalAgumentExpection.class () -> service.calcularBonus(new funcionario("Rodrigo", LocalDate.now(), new BigDecimal("25000.00")));
+}
