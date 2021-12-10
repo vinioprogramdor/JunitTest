@@ -1,0 +1,12 @@
+package leilao;
+
+import org.junit.jupiter.api.Test;
+
+public class HelloWorldMockito{
+  @Test
+  void hello(){
+    leilaoDao mock = Mockito.mock(leilaoDao.class);
+    list<Leilao> todos = mock.buscarTodos();
+    Assert.assertTrue(todos.isEmpty());
+  }
+}
