@@ -1,0 +1,11 @@
+@Service
+public calss GeradorDePagamento{
+
+  @Autowired
+  private PagamentoDao pagamentos;
+
+  @Autowired
+  public void gerarPagamento(Lance lanceVencedor){
+    this.pagamentos.salvar(pagamento);
+  }
+}
