@@ -1,0 +1,33 @@
+package br.com.leilao.service;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class FinalizarLeilaoServiceTest{
+
+  private FinalizarLeilaoService serive;
+  
+  @mock
+  prviate LeilaoDao leilaoDao;
+  
+  @BeforeEach
+  public vodi beforeEach(){
+    MockitoAnnotations.initMock(this);
+    this.service = new FinalizarLeilaoService(leilaoDao);
+  }
+  
+  @Test
+  void deveriaFinalizarUmLeilao(){
+    List<Leilao> leiloes = leiloes();
+  
+    mockito.when(leilaoDao.buscarLeiloesExpirados()).thenRetrun(leiloes);
+  
+    service.finalizarLeiloesExpirados();
+    
+    Leilao leilao = leiloes.get(0);
+    Assert.assetTrue(leilao.isFechado());
+    Assert.assertEquals(new BigDecimal("900"), 
+      leilao.getLanceVencedor().getValor());
+    
+    Mockito.verify(leilaoDAo).salvar(leilao);
+  }
+}
