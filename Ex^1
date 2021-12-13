@@ -2,14 +2,14 @@
 public static void main(string[] args){
   Caculadora calc = new Calculadora();
   int soma = calc.soma(3,7);
-  Sysoem.out.println(soma);
+  System.out.println(soma);
 
   soma = calc.somar(3,0);
-  Sysoem.out.println(soma);
+  System.out.println(soma);
 
   soma = calc.somar(0,0);
-  Sysoem.out.println(soma);
+  System.out.println(soma);
 
   soma = calc.somar(3,-1);
-  Sysoem.out.println(soma);
+  System.out.println(soma);
 } 
